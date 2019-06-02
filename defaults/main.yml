@@ -1,3 +1,5 @@
-server_locale: en_US.UTF-8
+server_locales: 
+  - en_US.UTF-8
+  - en_AU.UTF-8
 apt_packages:
   - python3-pip

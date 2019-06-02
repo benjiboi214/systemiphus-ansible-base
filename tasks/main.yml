@@ -1,8 +1,9 @@
 # Set locale
 - name: Ensure a locale exists
   locale_gen:
-    name: "{{ server_locale }}"
+    name: "{{ item }}"
     state: present
+  with_items: "{{ server_locales }}"
 
 # install pip3
 - name: Install apt packages
