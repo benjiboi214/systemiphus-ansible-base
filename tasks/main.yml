@@ -1,0 +1,19 @@
+# Set locale
+- name: Ensure a locale exists
+  locale_gen:
+    name: "{{ server_locale }}"
+    state: present
+
+# install pip3
+- name: Install python3 pip
+  apt:
+    name: "{{ apt_packages }}"
+    update_cache: yes
+    state: present
+
+
+# install python packages
+- name: Install required pip deps
+  pip:
+    name: "{{ python_packages }}"
+    executable: "/usr/bin/pip3"
