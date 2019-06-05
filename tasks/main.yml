@@ -17,4 +17,4 @@
 - name: Install required pip deps
   pip:
     name: "{{ python_packages }}"
-    executable: "/usr/bin/pip3"
+    executable: "/usr/local/bin/pip3"
